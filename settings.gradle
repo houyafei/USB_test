@@ -1,0 +1,2 @@
+include ':lightspec'
+include 'usbSerialForAndroid', 'usbSerialExamples'

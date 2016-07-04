@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:title="*meas：500 1 4" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="*meas：500 1 7" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:title="*meas：500 1 1" />
+        <item
+            android:id="@+id/nav_manage"
+            android:title="*meas：500 1 2" />
+    </group>
+
+    <item android:title="---setting---">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:title="命令结尾字符" />
+            <item
+                android:id="@+id/nav_send"
+                android:title="波特率选择" />
+            <item
+                android:id="@+id/nav_etidCmd"
+                android:title="自定义命令"/>
+        </menu>
+    </item>
+
+</menu>

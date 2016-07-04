@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.lightspec.fragments.FragmentSetting">
+
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:paddingTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="波特率：" />
+    <RadioGroup
+        android:id="@+id/id_settingBountrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RadioButton
+            android:id="@+id/id_bount57600"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="57600"/>
+        <RadioButton
+            android:id="@+id/id_bount115200"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:text="115200"/>
+        <RadioButton
+            android:id="@+id/id_bount38400"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="38400"/>
+        <RadioButton
+            android:id="@+id/id_bount921600"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="921600"/>
+    </RadioGroup>
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:paddingTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="字符串结尾字符：" />
+    <RadioGroup
+        android:id="@+id/id_settingBStrTail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RadioButton
+            android:id="@+id/id_strTail_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:text="\\n(回车)"/>
+        <RadioButton
+            android:id="@+id/id_strTail_2"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="\\r\\n（换行加回车）"/>
+
+    </RadioGroup>
+</LinearLayout>
