@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context="com.example.administrator.myapplication.Main2Activity"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:divider="@mipmap/line">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/id_excting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exciting"
+            android:layout_gravity="center"
+            android:onClick="main2Btn"/>
+
+        <Button
+            android:id="@+id/id_emission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emission/Scattering"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="main2Btn"/>
+
+    </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_laser"
+                android:entries="@array/laser"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter"
+                android:text="Filter"
+                android:onClick="main2Btn"/>
+            <Button
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/Hole"
+                 android:text="Hole"
+                android:onClick="main2Btn"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Slit"
+                    android:text="Slit"
+                    android:onClick="main2Btn"/>
+            <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_grat"
+                    android:entries="@array/grating" />
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/integration"
+                    android:text="Integration time"
+                    android:onClick="main2Btn"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gain"
+                    android:text="Gain"
+                    android:onClick="main2Btn"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mode"
+                    android:text="Continue Mode"
+                    android:onClick="main2Btn"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/wave"
+                    android:text="Wavenumber"
+                    android:onClick="main2Btn"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    <!--测量相关的按钮-->
+    <include layout="@layout/measure" />
+
+
+    <!-- 放置图表的位置 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/linechart"/>
+    </FrameLayout>
+
+
+    <!--Diagram和Analysis的按钮-->
+
+        <include layout="@layout/dia_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+
+
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Report"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Save Data"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Save Chart"/>
+    </LinearLayout>
+</LinearLayout>

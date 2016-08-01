@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="grating">
+        <item>grating 300line</item>
+        <item>grating 600line</item>
+        <item>grating 1200line</item>
+        <item>grating 1800line</item>
+    </string-array>
+
+</resources>

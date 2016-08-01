@@ -1,2 +1,2 @@
-include ':lightspec'
+include ':lightspec', ':lightspectrum', ':myapplication'
 include 'usbSerialForAndroid', 'usbSerialExamples'

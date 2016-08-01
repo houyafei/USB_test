@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="database">
+        <item>Database:Fluorescence</item>
+        <item>Database:Absorption</item>
+        <item>Database:Transmission</item>
+        <item>Database:Near Infrared</item>
+        <item>Database:Raman</item>
+        <item>Database:Plasmonics</item>
+        <item>Database:...</item>
+    </array>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="y_axis">
+        <item>Y-Axis:\nIntensity (counts)</item>
+        <item>Y-Axis:\nDigital counts (cts)</item>
+        <item>Y-Axis:\nPhoton number</item>
+    </array>
+</resources>

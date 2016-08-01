@@ -9,8 +9,6 @@ import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbDeviceConnection;
 import android.hardware.usb.UsbManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -41,9 +39,7 @@ public class Fragment_showUSBDatas extends Fragment {
     //
     private static final String CMD = "command";
 
-    //
-    private static final int SENDCMD = 0x990;
-    private static final int SHOWDATA = 0x991;
+
     private static final String TAG = "houyafei";
 
     //端口号
@@ -51,7 +47,7 @@ public class Fragment_showUSBDatas extends Fragment {
     // 获取的字符命令
     private String mCmd;
     private PendingIntent mPermissionIntent;
-
+    int mSerialIoManagerBufsize ;
     //控件
     private View mView;
     private Button mBntCleardata;
@@ -67,21 +63,7 @@ public class Fragment_showUSBDatas extends Fragment {
     //
     private byte[] mData;
 
-    //Handler
-    Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case SENDCMD:
-                    sendCmdMsg(mCmd);
-                    break;
-                case SHOWDATA:
-                    updateReceivedData(mData);
-                    break;
-            }
 
-        }
-    };
 
 
     private final ExecutorService mExecutor = Executors.newSingleThreadExecutor();
@@ -103,7 +85,6 @@ public class Fragment_showUSBDatas extends Fragment {
                         @Override
                         public void run() {
                             updateReceivedData(data);
-//                            Toast.makeText(getContext(), "有数据显示", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
@@ -213,7 +194,6 @@ public class Fragment_showUSBDatas extends Fragment {
         return mView ;
     }
 
-
     @Override
     public void onPause() {
         super.onPause();
@@ -290,6 +270,7 @@ public class Fragment_showUSBDatas extends Fragment {
         if (sPort != null) {
             Log.i(TAG, "Starting io manager ..");
             mSerialIoManager = new SerialInputOutputManager(sPort, mListener);
+            mSerialIoManagerBufsize = mSerialIoManager.getBufsize();
             mExecutor.submit(mSerialIoManager);
         }
     }

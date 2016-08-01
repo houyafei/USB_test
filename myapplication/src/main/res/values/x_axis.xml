@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="x_axis">
+        <item>X-Axis:\nWavelength (nm)</item>
+        <item>X-Axis:\nWavenumber (cm-1)</item>
+        <item>X-Axis:\nRaman shift (cm-1)</item>
+        <item>X-Axis:\nPixel</item>
+    </array>
+
+</resources>

@@ -14,7 +14,7 @@ public  class MyUSBDevice {
     private static int baudRate = 115200;
 
     //命令结尾字符
-    private static String tail = "\n" ;
+    private static String tail = "\r" ;
 
     public static int getBaudRate() {
         return baudRate;

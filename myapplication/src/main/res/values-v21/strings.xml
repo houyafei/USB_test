@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--report界面名称-->
+    <string name="absorption">Absorption</string>
+    <string name="flourescence">Flourescence</string>
+    <string name="near">Near Infrared</string>
+    <string name="raman">Raman</string>
+    <string name="plasmonics">Plasmonics</string>
+    <string name="single">Single particle spectroscopy</string>
+    <string name="ultra">Ultra-fast spectroscopy</string>
+
+<!--standard界面-->
+    <string name="environment">Environment</string>
+    <string name="food">Food</string>
+    <string name="person">Personal Health</string>
+    <string name="medical">Medical Diagnosis</string>
+    <string name="material">Material</string>
+    <string name="nanobio">Nanobiotechnology</string>
+    <string name="nanophoto">Nanophotonics</string>
+
+<!--按钮名称-->
+    <string name="database">Database</string>
+    <string name="library">Library</string>
+    <string name="nature">Nature</string>
+    <string name="science">Science</string>
+    <string name="spectroscopy">Spectroscopy</string>
+    <string name="scenario">Scenario</string>
+    <string name="standard">Standard</string>
+    <string name="device">Device</string>
+    <string name="parameter">Parameter</string>
+    <string name="map">Map</string>
+    <string name="email">Email</string>
+    <string name="share">Share</string>
+
+<!-- 下拉框文字说明 -->
+    <string name="diagram">Diagram</string>
+    <string name="x_axis">X-axis</string>
+    <string name="y_axis">Y-axis</string>
+    <string name="clear">Clear</string>
+    <string name="signal_progress">Signal Progressing</string>
+    <string name="fitting">Fitting</string>
+    <string name="dark">Dark</string>
+    <string name="nir">NIR</string>
+
+
+</resources>

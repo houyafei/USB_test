@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="laser">
+        <item>laser 244nm</item>
+        <item>laser 325nm</item>
+        <item>laser 364nm</item>
+        <item>laser 457nm</item>
+        <item>laser 488nm</item>
+        <item>laser 514.5nm</item>
+        <item>laser 532nm</item>
+        <item>laser 632.8nm</item>
+        <item>laser 785nm</item>
+        <item>laser 830nm</item>
+    </string-array>
+
+</resources>

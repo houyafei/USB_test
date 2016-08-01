@@ -55,7 +55,7 @@ public class FragmentSetting extends Fragment {
         String strTail = MyUSBDevice.getTail();
         if("\n".equals(strTail)){
             radioGroupStrTail.check(R.id.id_strTail_1);
-        }else if("\r\n".equals(strTail)){
+        }else if("\r".equals(strTail)){
             radioGroupStrTail.check(R.id.id_strTail_2);
         }
 

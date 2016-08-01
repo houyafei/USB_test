@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    tools:context="com.example.administrator.myapplication.Main41Activity">
+
+    <!-- 按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:id="@+id/layout4btn">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark"
+            android:textSize="11sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:text="@string/flourescene"
+             android:textSize="11sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/raman"
+             android:textSize="11sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nir"
+             android:textSize="11sp"/>        
+    </LinearLayout>
+    
+    <!-- chart-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/linechart"/>
+    </FrameLayout>
+    
+    <!-- 不知道这些是啥-->
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_unknown"
+        android:layout_gravity="center_horizontal"
+        android:background="#fff"/>
+    
+    <!-- 这样来个滚动串口显示剩下的控件-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 显示饼状图的 区域   -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/piechart"
+                android:background="#fff">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher"/>
+            </FrameLayout>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:numStars="5"
+                />
+            <!-- 说明-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    style="@style/text_label"
+                    android:text="@string/air"
+                    android:layout_alignParentLeft="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:id="@+id/address"
+                    android:text="中国 上海"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:id="@+id/time"
+                    android:text="20:51"
+                    android:layout_toLeftOf="@id/address"
+                    android:layout_marginRight="5dp"
+                    />
+
+            </RelativeLayout>
+
+            <!-- 气体指标-->
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_air_qulquantity"
+                android:background="@drawable/background"/>
+
+        </LinearLayout>
+    </ScrollView>
+    
+    
+</LinearLayout>
