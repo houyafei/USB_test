@@ -8,7 +8,12 @@ import android.widget.Toast;
 
 import com.example.administrator.myapplication.chartview.NumberPickerDialog;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Main2Activity extends AppCompatActivity {
+
+   private  String nowstr ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +46,24 @@ public class Main2Activity extends AppCompatActivity {
 
     private void setValues(final int id) {
 
+        String buttonString = (String) ((Button)findViewById(id)).getText();
+
+        //提取字符串中的数字
+        Pattern pattern = Pattern.compile("\\d+(\\.\\d+)?");
+        Matcher matcherNumber = pattern.matcher(buttonString);
         String nowNumber = "0";
+        if(matcherNumber.find()){
+            nowNumber = matcherNumber.group(0);
+        }
+
+        //提取字符串中的文字
+//提取字符串中的数字
+        Pattern pattern2 = Pattern.compile("[a-zA-Z]*");
+        Matcher matcherstr = pattern2.matcher(buttonString);
+        nowstr = "";
+        if(matcherstr.find()){
+            nowstr = matcherstr.group();
+        }
 
 //        NumberPickerDialog.OnMyNumberSetListener listener = new NumberPickerDialog.OnMyNumberSetListener() {
 //            @Override
@@ -54,15 +76,11 @@ public class Main2Activity extends AppCompatActivity {
         new NumberPickerDialog(this, new NumberPickerDialog.OnMyNumberSetListener() {
             @Override
             public void onNumberSet(String number, int mode) {
-                ((Button)findViewById(id)).setText(number);
+                ((Button)findViewById(id)).setText(nowstr+number);
                 Toast.makeText(Main2Activity.this, number, Toast.LENGTH_SHORT).show();
             }
-        }, "0", 0).show();
-
+        }, nowNumber, 0).show();
 
     }
-
-
-
 
 }
